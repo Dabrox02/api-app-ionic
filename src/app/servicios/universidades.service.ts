@@ -7,13 +7,14 @@ import { Injectable } from '@angular/core';
 export class UniversidadesService {
   private url: string = "http://universities.hipolabs.com/search?country=colombia";
   public offset:number = 0;
-  public limit:number = 10;
+  public limit:number = 5;
 
   constructor(public _http: HttpClient) {
   }
 
   getPersonas<T>(){
-    const fullpath: string = `${this.url}&offset=${this.offset}&limit=${this.limit}`
+    const fullpath: string = `${this.url}&offset=${this.offset}&limit=${this.limit}`;
+    console.log(fullpath);
     return this._http.get<T[]>(fullpath);
   }
 

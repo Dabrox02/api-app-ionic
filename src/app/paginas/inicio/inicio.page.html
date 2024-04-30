@@ -1,9 +1,13 @@
-<app-spinner></app-spinner>
-
-<ion-grid>
-  <ion-row *ngFor="let universidad of universidades; index as i">
-    <ion-col>
-      <app-card [universidad]="universidad"></app-card>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+<!-- <app-spinner></app-spinner> -->
+<ion-content role="feed">
+    <ion-grid>
+      <ion-row role="article" *ngFor="let universidad of universidades; index as i">
+        <ion-col>
+          <app-card [universidad]="universidad" [index]="i+1"></app-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+      <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

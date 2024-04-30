@@ -8,6 +8,7 @@ import { InicioPageRoutingModule } from './inicio-routing.module';
 
 import { InicioPage } from './inicio.page';
 import { ComponentesModule } from "../../componentes/componentes.module";
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
     declarations: [InicioPage],
@@ -17,6 +18,7 @@ import { ComponentesModule } from "../../componentes/componentes.module";
         IonicModule,
         InicioPageRoutingModule,
         ComponentesModule,
+        InfiniteScrollModule
     ],
     exports: [InicioPage]
 })

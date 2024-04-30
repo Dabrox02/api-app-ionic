@@ -1,0 +1,20 @@
+ion-card {
+    --background: #000;
+}
+
+ion-card-title {
+    --color: #52ffe4;
+  }
+  
+  ion-card-subtitle {
+    --color: #d1fff8;
+    font-weight: bold;
+  }
+
+.index{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    font-weight: bold;
+}
