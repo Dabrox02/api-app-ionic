@@ -1,0 +1,9 @@
+<app-spinner></app-spinner>
+
+<ion-grid>
+  <ion-row *ngFor="let universidad of universidades; index as i">
+    <ion-col>
+      <app-card [universidad]="universidad"></app-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
